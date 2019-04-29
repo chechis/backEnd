@@ -13,21 +13,19 @@
 </head>
 
 <body>
-  <video src="img/video.mp4" id="vidFondo"></video>
-
   <div class="contenedor">
     <div class="card rowTitulo">
       <h1>Buscador</h1>
     </div>
     <div class="colFiltros">
-      <form action="buscador.php" method="post" id="formulario">
+      <form id="formulario">
         <div class="filtrosContenido">
           <div class="tituloFiltros">
             <h5>Realiza una búsqueda personalizada</h5>
           </div>
           <div class="filtroCiudad input-field">
             <label for="selectCiudad">Ciudad:</label>
-            <select name="ciudad" id="selectCiudad">
+            <select name="ciudad" id="selectCiudad" class="filtroCiudad">
               <option value="elige" selected>Elige una ciudad</option>
               <option value="New York" selected>New York</option>
               <option value="Orlando" selected>Orlando</option>
@@ -37,19 +35,22 @@
               <option value="Miami" selected>Miami</option>
             </select>
           </div>
+
           <div class="filtroTipo input-field">
             <label for="selecTipo">Tipo:</label><br>
-            <select name="tipo" id="selectTipo">
-              <option value="" selected>Elige un tipo</option>
+            <select name="tipo" id="selectTipo" class="filtroTipo">
+              <option value="elige" selected>Elige un tipo</option>
               <option value="Casa" selected>Casa</option>
-              <option value="Casa de Campo" selected>Casa de Campo</option>
+              <option value="Casa de Campo" selected>Casa de campo</option>
               <option value="Apartamento" selected>Apartamento</option>
             </select>
           </div>
+
           <div class="filtroPrecio">
             <label for="rangoPrecio">Precio:</label>
             <input type="text" id="rangoPrecio" name="precio" value="" />
           </div>
+
           <div class="botonField">
             <input type="submit" class="btn white" value="Buscar" id="submitButton">
           </div>
@@ -58,12 +59,11 @@
     </div>
 
     <div class="colContenido">
-      <div class="tituloContenido card">
+      <div class="tituloContenido card" id="identi">
         <h5>Resultados de la búsqueda:</h5>
         <div class="divider"></div>
         <button type="button" name="todos" class="btn-flat waves-effect" id="mostrarTodos">Mostrar Todos</button>
       </div>
-
     </div>
   </div>
 
